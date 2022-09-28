@@ -1,0 +1,36 @@
+<section>
+  <div class="title__name">
+    <h1>
+      <i> Esta es la aplicación telemática de </i>
+      <em>{{ nombre }}</em>
+    </h1>
+  </div>
+</section>
+
+<section class="card">
+  <h2 class="card__name"></h2>
+  <div class="card__person"></div>
+
+  <div class="card__position">
+    <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+      <input
+        formControlName="email"
+        placeholder="Email"
+        class="card__position__username"
+        type="text"
+      />
+      <input
+        formControlName="password"
+        placeholder="Password"
+        class="card__position__password"
+        type="password"
+      />
+      <br />
+      <button class="card__position__button" type="submit">Log In</button>
+    </form>
+    <br />
+    <footer class="card__position__footer" (click)="goHome()">
+      I want to enter as a guest
+    </footer>
+  </div>
+</section>

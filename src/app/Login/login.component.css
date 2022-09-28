@@ -1,0 +1,97 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: red;
+}
+
+.card {
+  width: 330px;
+  min-height: 350px;
+  background-color: #fff;
+  margin: 0 auto;
+  margin-top: 250px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.24);
+  background-image: linear-gradient(
+    to top,
+    #505285 0%,
+    #585e92 12%,
+    #65689f 25%,
+    #7474b0 37%,
+    #7e7ebb 50%,
+    #8389c7 62%,
+    #9795d4 75%,
+    #a2a1dc 87%,
+    #b5aee4 100%
+  );
+  background-size: 100% 150px;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding: 0.1px;
+}
+
+.card__person {
+  background-image: url('https://cdn.sstatic.net/Sites/stackoverflow/company/img/logos/so/so-icon.png');
+  background-size: cover;
+  background-position: center;
+  background-color: lightgrey;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: 90px;
+  border-radius: 50%;
+  border: 7px solid white;
+  cursor: pointer;
+}
+
+.card__name {
+  margin-top: 30px;
+}
+
+.card__position {
+  margin: 0 auto;
+  margin-bottom: 15px;
+  /*   background-color:red; */
+  width: 300px;
+}
+
+.card__position__username {
+  margin-bottom: 8px;
+  margin-top: 5px;
+  border: 0.1px solid black;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.card__position__password {
+  border: 0.1px solid black;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.card__position__button {
+  margin-top: 15px;
+}
+
+.card__position__footer {
+  margin-top: 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.card__position__footer:hover {
+  color: blue;
+}
+
+.title__name {
+  margin-top: 40px;
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 7px;
+  background-color: #fff;
+  box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.24);
+}
+
+em {
+  color: blue;
+}

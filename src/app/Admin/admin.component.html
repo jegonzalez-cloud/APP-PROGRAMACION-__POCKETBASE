@@ -1,0 +1,38 @@
+<html>
+  <body>
+    <img
+      class="img__back"
+      (click)="logOut()"
+      src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/32/000000/external-exit-100-most-used-icons-flaticons-lineal-color-flat-icons.png"
+    />
+    <br />
+
+    <h2>Products Table</h2>
+
+    <button (click)="openCreateProductsModal()">Create</button>
+
+    <br />
+    <br />
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Unit</th>
+        <th>Price</th>
+      </tr>
+      <tr
+        class="table__row"
+        *ngFor="let data of items"
+        (click)="openProductsModal(data)"
+      >
+        <td>{{ data.id }}</td>
+        <td>{{ data.name }}</td>
+        <td>{{ data.quantity }}</td>
+        <td>{{ data.unit }}</td>
+        <td>{{ data.price }}</td>
+      </tr>
+    </table>
+  </body>
+</html>
