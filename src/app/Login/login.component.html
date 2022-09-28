@@ -26,7 +26,13 @@
         type="password"
       />
       <br />
-      <button class="card__position__button" type="submit">Log In</button>
+      <button
+        [disabled]="loginForm.invalid"
+        class="card__position__button"
+        type="submit"
+      >
+        Log In
+      </button>
     </form>
     <br />
     <footer class="card__position__footer" (click)="goHome()">

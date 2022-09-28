@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { Service } from '../Service/service.service';
@@ -25,8 +30,8 @@ export class LoginComponent {
 
   createForm() {
     this.loginForm = this.fb.group({
-      email: new FormControl(''),
-      password: new FormControl(''),
+      email: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required]),
     });
   }
 
@@ -35,14 +40,17 @@ export class LoginComponent {
   }
 
   logIn() {
-    this.service.doLogin(this.loginForm.value).subscribe((response: any) => {
-      if (response.token != null) {
-        showAlert('exito', 'success');
-        localStorage.setItem('token', response.token);
-        this.router.navigate(['admin']);
-      } else {
+    this.service.doLogin(this.loginForm.value).subscribe({
+      next: (x: any) => {
+        if (x.token != null) {
+          showAlert('exito', 'success');
+          localStorage.setItem('token', x.token);
+          this.router.navigate(['admin']);
+        }
+      },
+      error: (err: any) => {
         showAlert('Incorrect Credentials', 'warning');
-      }
+      },
     });
   }
 }

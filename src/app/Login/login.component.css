@@ -70,6 +70,7 @@ body {
 
 .card__position__button {
   margin-top: 15px;
+  cursor: pointer;
 }
 
 .card__position__footer {
